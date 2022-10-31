@@ -52,6 +52,8 @@ document.addEventListener('click', function(e){
             orderedItems.splice(index, 1)
             if (orderedItems.length < 1) {
                 checkoutSection.style.display = 'none'
+                document.getElementById('card-details').style.display = 'none'
+                document.getElementById('main').style.background = 'white'
             }
         }
 
@@ -63,6 +65,9 @@ document.addEventListener('click', function(e){
         document.getElementById('main').style.background = 'linear-gradient(lightgrey, white'
     }
     else if (e.target.id === 'pay-btn') {
+        if (cardInputName.value && cardInputNumber.value && cardInputCvv.value) {
+            document.getElementById('pay-btn').removeAttribute('disabled')
+            }
         document.getElementById('card-details').style.display = 'none'
         checkoutSection.style.display= 'none'
         const cardInputName = document.getElementById('card-input-name')
@@ -71,9 +76,7 @@ document.addEventListener('click', function(e){
         document.getElementById('payment-successful').innerHTML = `<p class="payment-successful-text">Thanks, ${cardInputName.value}! Your order is on its way!</p>`
         document.getElementById('payment-successful').style.display = 'block'
         document.getElementById('main').style.background = 'white'
-        if (cardInputName.value && cardInputNumber.value && cardInputCvv.value) {
-        document.getElementById('pay-btn').removeAttribute('disabled')
-        }
+        
     }
     
 })

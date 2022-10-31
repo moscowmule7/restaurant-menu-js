@@ -7,35 +7,41 @@
     </head>
     <body>
         <header>
-            <h3>Samsa's Diner</h3>
-            <h5>The best burgers and pizzas in town.</h5>
+            <div class="container">
+                <h3>Samsa's Diner</h3>
+                <h5>The best burgers and pizzas in town.</h5>
+            </div>
         </header>
         <main id="main">
-            <div id="menu-section">
+            <div class="container">
+                <div id="menu-section">
 
-            </div>
-            <div class="checkout-section" id="checkout-section">
-                <p class="checkout-title">Your Order</p>
-                <div id="checkout-section-list" class="checkout-section-list">
+                </div>
+                <div class="checkout-section" id="checkout-section">
+                    <p class="checkout-title">Your Order</p>
+                    <div id="checkout-section-list" class="checkout-section-list">
+                        
+                    </div>
+                    <hr class="checkout-section-divider">
+                    <div class="checkout-total">
+                        <p class="checkout-total-price">Total Price</p>
+                        <p class="checkout-total-price" id="checkout-total-price"></p>
+                    </div>
+                    <button class="purchase-btn" id="purchase-btn">Complete Order</button>
+                </div>
+                <div class="card-details" id="card-details">
+                    <h4 class="card-title">Enter card details</h4>
+                    <form>
+                    <input class="card-input" type="text" placeholder="Enter your name" id="card-input-name">
+                    <input class="card-input" type="number" placeholder="Enter card number" id="card-input-number">
+                    <input class="card-input" type="number" placeholder="Enter CVV" id="card-input-cvv">
+                    <input type="submit" class="pay-btn" id="pay-btn" value="Pay" disabled>
+                    </form>
+
+                </div>
+                <div class="payment-successful" id="payment-successful">
                     
                 </div>
-                <hr class="checkout-section-divider">
-                <div class="checkout-total">
-                    <p class="checkout-total-price">Total Price</p>
-                    <p class="checkout-total-price" id="checkout-total-price"></p>
-                </div>
-                <button class="purchase-btn" id="purchase-btn">Complete Order</button>
-            </div>
-            <div class="card-details" id="card-details">
-                <h4 class="card-title">Enter card details</h4>
-                <input class="card-input" type="text" placeholder="Enter your name" id="card-input-name" >
-                <input class="card-input" type="number" placeholder="Enter card number" id="card-input-number" >
-                <input class="card-input" type="number" placeholder="Enter CVV" id="card-input-cvv" >
-                <button class="pay-btn" id="pay-btn" disabled>Pay</button>
-
-            </div>
-            <div class="payment-successful" id="payment-successful">
-                
             </div>
         </main>
 	<script src="index.js" type="module"></script>
